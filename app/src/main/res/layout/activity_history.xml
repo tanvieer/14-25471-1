@@ -25,6 +25,12 @@
             android:layout_height="match_parent"
             android:id="@+id/Back"
             android:onClick="onClickBack" />
+        <Button
+            android:text="Clear History"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ClearHistory"
+            android:onClick="onClickClearHistory" />
 
     </LinearLayout>
 

@@ -80,9 +80,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             while (cursor.moveToNext());
         }
 
-
-
-
         return historyList;
+    }
+
+    public void deleteHistory(){
+        db = getWritableDatabase();
+        db.execSQL("DROP TABLE IF EXISTS "+ TABLE_NAME);
+        Log.d("calcDB","Deleted all");
+        onCreate(db);
     }
 }
