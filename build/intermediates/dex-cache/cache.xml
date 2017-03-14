@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tanvir\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.2.0_da45f04dce4c64c324c1ab4591016e98b48a80e2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.2.0_0b9dccf2414b0516197af67148e2a2ca05e6d957\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
+        <dex dex="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.2.0_7e05a8344a58561f05bcbcb8fe17c88ef1f4a950\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c9858c08a8fb38fb5429d43a32c5be6e36e8d277">
+        <dex dex="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_a730ee3508982dee57a5df82e0f47be9167f3ee9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
+        <dex dex="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.2.0_db9adac89577ca4aee1cb5e6b0874d40d22cf195\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\exploded-aar\com.android.support\transition\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e51c2f662bb72419632af5192553c37e33890a99">
+        <dex dex="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.2.0_74b0ed4971620ba5a5dccb574800ec17494de929\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ff5b6f81efcea83bc5f5f6e2a0fbc1b4295fdaa1">
+        <dex dex="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_1f84d80cf90ed88d8ee5f8b6501baa091e027811\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\exploded-aar\com.android.support\design\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
+        <dex dex="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.2.0_0a15cbb946803c80fedcc72334265152878fb95b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.2.0_037d9b170d03f57f54ca7cb6d099c706e4c6e9c8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.2.0_f5313511336752071be0d3c9535245a29d97d7d6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
+        <dex dex="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.2.0_e54606a56c65f9b475604641a84c8e0dc0c934f5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.2.0_e1e0c40cf9f8960d97a30e796ba5c035ff5e1076\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.2.0_91c52c5f235fe3905b569c9e8aca55b301a3f1e4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.2.0_ad9c3321928b538073e1854661555e1b5d7cc9f7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
+        <dex dex="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.2.0_64cec1871c603c738e7efb1d39b54714cf6c52b2\classes.dex" />
+    </item>
+
+</items>
