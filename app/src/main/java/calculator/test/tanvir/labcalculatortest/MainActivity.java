@@ -101,12 +101,13 @@ public class MainActivity extends AppCompatActivity {
         if(currentOperator == "" && oldOperator != "" && oldResult != "" && oldNumber != ""){
             result = String.valueOf(operate(oldResult, oldNumber, oldOperator));
 
+            String data = oldResult+oldOperator+oldNumber+" = "+ String.valueOf(result);
            // Toast.makeText(this, oldResult+"Data  " + result, Toast.LENGTH_SHORT).show();
             oldResult = result;
             updateScreen();
 
 
-            String data = display+" = "+ String.valueOf(result);
+
             if(myDb.insertData(data)){
                 //Toast.makeText(this, " Inserted", Toast.LENGTH_SHORT).show();
                 Log.d("HistorySQL", "cannot inserted = "+data);
@@ -142,9 +143,6 @@ public class MainActivity extends AppCompatActivity {
             default: return false;
         }
     }
-
-
-
 
 //------------------------------------Button Functions----------------------------------------------
 
