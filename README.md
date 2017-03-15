@@ -2,18 +2,18 @@
 # Mohammad Tanvir Islam
 # tanvieer@gmail.com
 
-Activity Change
+* Activity Change
 
-SQLite History
+* SQLite History
 
-ConfigurationChange
+* ConfigurationChange
 
-SaveInstanceState
+* SaveInstanceState
 
-RestoreInstanceState
+* RestoreInstanceState
 
-Repeat Equal Button
+* Repeat Equal Button
 
-SharedPreferences
+* SharedPreferences
 
-Alternative Layout				 
+* Alternative Layout				 
