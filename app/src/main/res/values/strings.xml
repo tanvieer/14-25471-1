@@ -28,6 +28,14 @@
     <string name="title_activity_history">All History</string>
 
     <string name="large_text">
+
+        "Mohammad Tanvir Islam\n\n"
+        "14-25471-1\n\n"
+        "tanvieer@gmail.com\n\n"
+        "+8801911066421\n\n"
+        "American International University Bangladesh\n\n\n\n\n\n\n\n"
+
+
         "Material is the metaphor.\n\n"
 
         "A material metaphor is the unifying theory of a rationalized space and a system of motion."
@@ -116,6 +124,8 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+
+
     <string name="action_settings">Settings</string>
 
 </resources>

@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="4e39235a8153e4f17e90381b53be2550a3310dd0">
+        sha1="ac83612082d0b2baac8534daf7e066d686b97539">
         <dex dex="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_a730ee3508982dee57a5df82e0f47be9167f3ee9\classes.dex" />
     </item>
     <item
@@ -61,7 +61,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="2c7478f0490363a58ed3cf5bb0af6fa3c2239242">
+        sha1="66fabc7e7e073d33f2d9941f6fc34ae815870991">
         <dex dex="F:\Others\WorkSpace\AndroidStudio\WorkSpace\LabCalculatorTest\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_1f84d80cf90ed88d8ee5f8b6501baa091e027811\classes.dex" />
     </item>
     <item
