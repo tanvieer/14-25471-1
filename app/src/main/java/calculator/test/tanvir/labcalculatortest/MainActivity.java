@@ -149,6 +149,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickNumber( View v){
 
+        if(_screen.getText().equals("Infinity") || _screen.getText().equals("-Infinity")) {
+            clearAll();
+            updateScreen();
+        }
+
         if(result != ""){
             clear();
             updateScreen();
@@ -170,6 +175,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onClickOperator(View v){
+        if(_screen.getText().equals("Infinity") || _screen.getText().equals("-Infinity")) {
+            clearAll();
+            updateScreen();
+            return;
+        }
+
+
         dotChecker = false;
 
         if(display == "") return;
