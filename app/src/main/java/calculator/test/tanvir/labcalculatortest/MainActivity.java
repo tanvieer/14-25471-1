@@ -3,6 +3,7 @@ package calculator.test.tanvir.labcalculatortest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
     private String currentOperator = "";
     private String result = "";
     private boolean dotChecker = false;
+    private String oldResult = "";
+    private String oldOperator = "";
+    private String oldNumber = "";
 
     DatabaseHelper myDb;
 
@@ -52,6 +56,16 @@ public class MainActivity extends AppCompatActivity {
         dotChecker = false;
     }
 
+    private void clearAll(){
+        display = "";
+        currentOperator = "";
+        result = "";
+        dotChecker = false;
+        oldResult = "";
+        oldNumber = "";
+        oldOperator = "";
+    }
+
     private double operate(String a, String b, String op){
 
         switch(op){
@@ -64,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             case "/": try{
                 return Double.valueOf(a) / Double.valueOf(b);
             } catch (Exception e){
-                Log.d("Calc", e.getMessage());
+                Log.d("MyException", e.getMessage());
             }
             default: return -1;
         }
@@ -73,16 +87,43 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean getResult(){
         dotChecker = false;
+
+
+        Log.d("getResult", "oldResult = "+oldResult);
+        Log.d("getResult", "oldOperator = "+oldOperator);
+        Log.d("getResult", "oldNumber = "+oldNumber);
+
+        if(currentOperator == "" && oldOperator != "" && oldResult != "" && oldNumber != ""){
+            result = String.valueOf(operate(oldResult, oldNumber, oldOperator));
+
+            Toast.makeText(this, oldResult+"Data  " + result, Toast.LENGTH_SHORT).show();
+            oldResult = result;
+            updateScreen();
+
+
+            String data = display+" = "+ String.valueOf(result);
+            if(myDb.insertData(data)){
+                //Toast.makeText(this, " Inserted", Toast.LENGTH_SHORT).show();
+                Log.d("HistorySQL", "cannot inserted = "+data);
+            }
+            //else Toast.makeText(this, " cannot be inserted", Toast.LENGTH_SHORT).show();
+
+            return true;
+
+        }
+
         if(currentOperator == "") return false;
         String[] operation = display.split(Pattern.quote(currentOperator));
         if(operation.length < 2) return false;
         result = String.valueOf(operate(operation[0], operation[1], currentOperator));
+        oldNumber = operation[1];
 
         String data = display+" = "+ String.valueOf(result);
-        if(myDb.insertData(data)){
-            Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show();
+        if(!myDb.insertData(data)){
+            //Toast.makeText(this, "Data Inserted 2", Toast.LENGTH_SHORT).show();
+            Log.d("HistorySQL", "cannot inserted = "+data);
         }
-        else Toast.makeText(this, "Data cannot be inserted", Toast.LENGTH_SHORT).show();
+        //else Toast.makeText(this, "Data cannot be inserted 2", Toast.LENGTH_SHORT).show();
 
         return true;
     }
@@ -150,16 +191,18 @@ public class MainActivity extends AppCompatActivity {
                 result = "";
             }
             currentOperator = b.getText().toString();
+            oldOperator = currentOperator;
         }
         display += b.getText();
         currentOperator = b.getText().toString();
+        oldOperator = currentOperator;
         updateScreen();
     }
 
 
 
     public void onClickClear(View v){
-        clear();
+        clearAll();
         updateScreen();
     }
 
@@ -169,7 +212,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        _screen.setText(display + "\n" + String.valueOf(result));
+        _screen.setText(String.valueOf(result));
+        oldResult = result;
+        clear();
+        display = oldResult;
     }
 
     //---------------------------------Memory Function----------------------------------------------
@@ -178,14 +224,23 @@ public class MainActivity extends AppCompatActivity {
     public void onClickMemoryPlusButton(View v){
         SharedPreferences sharedpreferences = getSharedPreferences("Mem", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedpreferences.edit();
+        Float oldValue;
 
 
-        Log.d("test","Mem called before1");
-        Float oldValue = Float.parseFloat(sharedpreferences.getString("Mem","0"));
-        Log.d("test","Mem called before2");
-        String disp =  parseNumber();
-        float newValue =  Float.parseFloat(disp);
+        Log.d("testMEMp","Mem called before1 > " + sharedpreferences.getString("Mem","0"));
+        String temp = sharedpreferences.getString("Mem","0");
+        if(temp== null || temp == "") oldValue = 0.0f;
+        else oldValue = Float.parseFloat(temp);
+        Log.d("testMEMp","Mem called before2");
+        String disp = parseNumber();
+
+        float newValue;
+
+        if(oldResult!="") newValue =  Float.parseFloat(oldResult);
+        else newValue =  Float.parseFloat(disp);
         Log.d("test","Mem called after");
+
+
         try{
             oldValue += newValue;
             display =  Float.toString(oldValue);
@@ -209,13 +264,22 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedpreferences = getSharedPreferences("Mem", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedpreferences.edit();
 
+        Float oldValue;
 
-        // Log.d("test","Mem called before1");
-        Float oldValue = Float.parseFloat(sharedpreferences.getString("Mem","0"));
-        // Log.d("test","Mem called before2");
-        String disp =  parseNumber();
-        float newValue =  Float.parseFloat(disp);
-        // Log.d("test","Mem called after");
+
+        Log.d("testMEMp","Mem called before1 > " + sharedpreferences.getString("Mem","0"));
+        String temp = sharedpreferences.getString("Mem","0");
+        if(temp== null || temp == "") oldValue = 0.0f;
+        else oldValue = Float.parseFloat(temp);
+        Log.d("testMEMp","Mem called before2");
+        String disp = parseNumber();
+
+        float newValue;
+
+        if(oldResult!="") newValue =  Float.parseFloat(oldResult);
+        else newValue =  Float.parseFloat(disp);
+        Log.d("test","Mem called after");
+
         try{
             oldValue -= newValue;
             display =  Float.toString(oldValue);
@@ -304,7 +368,46 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+//--------------------------------------orientation change--------------------------------------
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        // Checks the orientation of the screen
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            Toast.makeText(this, "landscape", Toast.LENGTH_SHORT).show();
+            Log.d("orientation", "landscape");
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
+            Toast.makeText(this, "portrait", Toast.LENGTH_SHORT).show();
+
+            Log.d("orientation", "portrait");
+        }
+    }
+
+
+
+
+    // ---------------------------------save and restore data on orientation change----------------------
+
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        //Log.i(TAG, "onRestoreInstanceState");
+        CharSequence userText = savedInstanceState.getCharSequence("savedText");
+        display = userText.toString();
+        _screen.setText(userText);
+    }
+
+
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i("debug", "onSaveInstanceState");
+
+
+        CharSequence userText = _screen.getText();
+        outState.putCharSequence("savedText", userText);
+
+    }
 
 
 

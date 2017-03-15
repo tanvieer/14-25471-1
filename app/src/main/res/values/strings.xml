@@ -22,7 +22,7 @@
 
     <string name="mp">M+</string>
     <string name="mm">M-</string>
-    <string name="mc">MCL</string>
+    <string name="mc">MC</string>
     <string name="mr">MR</string>
     <string name="history">Show History</string>
     <string name="title_activity_history">All History</string>
