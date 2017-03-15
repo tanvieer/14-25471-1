@@ -5,6 +5,6 @@
            ConfigurationChange
            SaveInstanceState
            RestoreInstanceState
-					 Repeat Equal Button
-					 SharedPreferences
+	   Repeat Equal Button
+	   SharedPreferences
 					 
