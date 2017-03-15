@@ -14,4 +14,4 @@ Repeat Equal Button
 
 SharedPreferences
 
-					 
+Alternative Layout				 
