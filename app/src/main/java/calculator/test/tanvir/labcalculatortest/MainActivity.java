@@ -382,14 +382,20 @@ public class MainActivity extends AppCompatActivity {
         // Checks the orientation of the screen
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
 
-            Toast.makeText(this, "landscape", Toast.LENGTH_SHORT).show();
+
+           // Toast.makeText(this, "landscape", Toast.LENGTH_SHORT).show();
             Log.d("orientation", "landscape");
+            recreate();
+
+
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
 
 
-            Toast.makeText(this, "portrait", Toast.LENGTH_SHORT).show();
+
+            //Toast.makeText(this, "portrait", Toast.LENGTH_SHORT).show();
 
             Log.d("orientation", "portrait");
+            recreate();
         }
     }
 
