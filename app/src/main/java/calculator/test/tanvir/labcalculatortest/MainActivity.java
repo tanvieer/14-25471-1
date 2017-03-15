@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//---------------------------------------------Private Functions------------------------------------
+//---------------------------------------------My Private Functions------------------------------------
     private void updateScreen(){
         _screen.setText(display);
     }
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         if(currentOperator == "" && oldOperator != "" && oldResult != "" && oldNumber != ""){
             result = String.valueOf(operate(oldResult, oldNumber, oldOperator));
 
-            Toast.makeText(this, oldResult+"Data  " + result, Toast.LENGTH_SHORT).show();
+           // Toast.makeText(this, oldResult+"Data  " + result, Toast.LENGTH_SHORT).show();
             oldResult = result;
             updateScreen();
 
@@ -394,6 +394,23 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         //Log.i(TAG, "onRestoreInstanceState");
         CharSequence userText = savedInstanceState.getCharSequence("savedText");
+        CharSequence opert = savedInstanceState.getCharSequence("savedOperator");
+
+        CharSequence oldR = savedInstanceState.getCharSequence("oldResult");
+        CharSequence oldN = savedInstanceState.getCharSequence("oldNumber");
+        CharSequence oldOp = savedInstanceState.getCharSequence("oldOperator");
+
+        currentOperator = opert.toString();
+        oldOperator = currentOperator;
+        oldResult = oldR.toString();
+        oldNumber = oldN.toString();
+        oldOperator = oldOp.toString();
+
+        Log.d("oldR" , oldResult);
+        Log.d("oldR" , oldNumber);
+        Log.d("oldR" , oldOperator);
+        Log.d("oldR" , currentOperator);
+
         display = userText.toString();
         _screen.setText(userText);
     }
@@ -406,6 +423,12 @@ public class MainActivity extends AppCompatActivity {
 
         CharSequence userText = _screen.getText();
         outState.putCharSequence("savedText", userText);
+        outState.putCharSequence("savedOperator", currentOperator);
+
+        outState.putCharSequence("oldOperator", oldOperator);
+
+        outState.putCharSequence("oldResult", oldResult);
+        outState.putCharSequence("oldNumber", oldNumber);
 
     }
 
