@@ -9,27 +9,34 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    >
+    android:paddingBottom="@dimen/activity_vertical_margin">
 
     <TextView
         android:id="@+id/display"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="30dp"
         android:gravity="bottom|right"
         android:text="0"
         android:textSize="30dp"/>
 
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        >
+
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:weightSum="4">
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:weightSum="4">
+            android:weightSum="5">
 
             <Button
                 android:id="@+id/btn1"
@@ -63,6 +70,13 @@
                 android:layout_weight="1"
                 android:text="@string/plus"
                 android:onClick="onClickOperator" />
+            <Button
+                android:id="@+id/btnmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mp"
+                android:layout_weight="1"
+                android:onClick="onClickMemoryPlusButton" />
 
         </TableRow>
 
@@ -70,7 +84,7 @@
             android:id="@+id/tableRow2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:weightSum="4">
+            android:weightSum="5">
 
 
             <Button
@@ -107,6 +121,13 @@
                 android:layout_weight="1"
                 android:text="@string/minus"
                 android:onClick="onClickOperator" />
+            <Button
+                android:id="@+id/btnmm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mm"
+                android:layout_weight="1"
+                android:onClick="onClickMemoryMinusButton" />
 
         </TableRow>
 
@@ -114,7 +135,7 @@
             android:id="@+id/tableRow3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:weightSum="4">
+            android:weightSum="5">
 
             <Button
                 android:id="@+id/btn7"
@@ -147,6 +168,13 @@
                 android:text="@string/mult"
                 android:layout_weight="1."
                 android:onClick="onClickOperator" />
+            <Button
+                android:id="@+id/btnmc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mc"
+                android:layout_weight="1"
+                android:onClick="onClickMemoryClean" />
 
         </TableRow>
 
@@ -156,7 +184,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:baselineAligned="false"
-            android:weightSum="4" >
+            android:weightSum="5" >
 
             <Button
                 android:id="@+id/btn0"
@@ -182,6 +210,7 @@
                 android:layout_weight="1"
                 android:onClick="onClickEqual" />
 
+
             <Button
                 android:id="@+id/btnDiv"
                 android:layout_width="wrap_content"
@@ -190,42 +219,6 @@
                 android:layout_weight="1"
                 android:onClick="onClickOperator" />
 
-        </TableRow>
-
-
-
-
-
-
-
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="4">
-
-            <Button
-                android:id="@+id/btnmp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/mp"
-                android:layout_weight="1"
-                android:onClick="onClickMemoryPlusButton" />
-            <Button
-                android:id="@+id/btnmm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/mm"
-                android:layout_weight="1"
-                android:onClick="onClickMemoryMinusButton" />
-            <Button
-                android:id="@+id/btnmc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/mc"
-                android:layout_weight="1"
-                android:onClick="onClickMemoryClean" />
             <Button
                 android:id="@+id/btnmr"
                 android:layout_width="wrap_content"
@@ -233,38 +226,39 @@
                 android:text="@string/mr"
                 android:layout_weight="1"
                 android:onClick="onClickMemoryRecall" />
-        </LinearLayout>
 
+        </TableRow>
 
-        <LinearLayout
+        <TableRow
+            android:id="@+id/tableRow5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:weightSum="1">
-
-            <Button
-                android:id="@+id/btnClear"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:text="@string/clear"
-                android:onClick="onClickClear" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
+            android:baselineAligned="false"
+            android:weightSum="2" >
 
             <Button
                 android:id="@+id/btnHistory"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:text="@string/history"
-                android:onClick="onClickHistory" />
-        </LinearLayout>
+                android:onClick="onClickHistory"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/clear"
+                android:onClick="onClickClear"
+                android:layout_weight="1"/>
+
+
+
+        </TableRow>
+
 
     </TableLayout>
 
-
+    </LinearLayout>
 
 
 

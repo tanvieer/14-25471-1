@@ -15,6 +15,11 @@ import android.widget.Toast;
 import java.util.regex.Pattern;
 
 
+/**
+ * Created by Tanvir on 04-Mar-17.
+ */
+
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView _screen;
@@ -360,7 +365,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Toast.makeText(this, "History Button Clicked", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "History Button Clicked", Toast.LENGTH_SHORT).show();
 
         startActivity(new Intent(MainActivity.this, HistoryActivity.class));
 
@@ -376,9 +381,12 @@ public class MainActivity extends AppCompatActivity {
 
         // Checks the orientation of the screen
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+
             Toast.makeText(this, "landscape", Toast.LENGTH_SHORT).show();
             Log.d("orientation", "landscape");
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
+
+
             Toast.makeText(this, "portrait", Toast.LENGTH_SHORT).show();
 
             Log.d("orientation", "portrait");

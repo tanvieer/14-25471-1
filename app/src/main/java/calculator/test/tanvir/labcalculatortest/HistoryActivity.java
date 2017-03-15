@@ -12,6 +12,11 @@ import android.widget.Toast;
 
 import java.util.List;
 
+
+/**
+ * Created by Tanvir on 09-Mar-17.
+ */
+
 public class HistoryActivity extends AppCompatActivity {
 
     private TextView _ScrollScreen;
@@ -52,7 +57,7 @@ public class HistoryActivity extends AppCompatActivity {
     }
 
     public void onClickBack(View v){
-        Toast.makeText(this, "BackClicked", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "BackClicked", Toast.LENGTH_SHORT).show();
 
         startActivity(new Intent(HistoryActivity.this, MainActivity.class));
     }
